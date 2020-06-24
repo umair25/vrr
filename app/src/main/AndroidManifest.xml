@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.journaldev.vrStreetView">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="travikaVirtualTour"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".tourActivity"></activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBas57J2XxGwBpA3tqIDncZPjnNRklGtJ4" /> <!--// latest fiverr: AIzaSyBas57J2XxGwBpA3tqIDncZPjnNRklGtJ4 ///// new m941 ''//AIzaSyDtb7CM3jWpC-a-FFeySKsMqtnkSK3SVXo// AIzaSyCdLhrNxQEkA0VDjuCzngXJJ25U7VE-O-I/// AIzaSyArWtOPORIoQ-Ck05pWWTwdEr5auCKxMM0 // AIzaSyDk6uWii65rqvan6ukrCggVGTwM2APCyX0 -->
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:scheme="http"
+                    android:host="vrr.com" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
